@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+    npflaskapp:
+        container_name: npflaskapp
+        restart: always
+        build:
+            context: .
+            dockerfile: "Dockerfile"
+        ports:
+            - "5000:5000"
+        volumes:
+            - "./web:/app"
+        #command:
+        #    docker run -d --name npflaskapp --rm -it -p 5000:5000/tcp --network newpayroll npflaskapp
+
+networks:
+    default:
+        external:
+            name: newpayroll

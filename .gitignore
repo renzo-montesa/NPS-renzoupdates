@@ -1,0 +1,7 @@
+.vscode/
+__pycache__/
+venv/
+uploads/*
+.idea
+config.py
+api/v1/helper/multi_db_management.py
